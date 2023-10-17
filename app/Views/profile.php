@@ -19,7 +19,7 @@
     background-color: whitesmoke;">
     
         <div style="text-align: center;">
-            <img src="https://avatars.githubusercontent.com/u/92504989?s=400&u=31e563b79e161f0a9dc6357fb3e52a8e90623333&v=4" class="rounded-circle mx-auto d-block py-3" alt="foto" width="160" height="190">
+            <img src="<?= $user['foto'] ?? base_url('assets/img/siska.jpg') ?>" class="rounded-circle mx-auto d-block py-3" alt="foto" width="160" height="190">
         </div>
             
         <div class="d-grid gap-3 mx-auto mt-5" style="width: 70%;">
