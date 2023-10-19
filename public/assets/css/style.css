@@ -49,3 +49,16 @@ body {
 .btn-primary:hover{
 	box-shadow: 0px 1px 8px #ffffff;
 }
+
+/* list user */
+.containerlist {
+	position: absolute;
+    top: 50px;
+    left: 100px;
+    right: 100px;
+    bottom: 50px;
+	overflow: auto;
+	padding: 5% 5%;
+	background-color: #fafafa;
+	border-radius: 20px; 
+}
