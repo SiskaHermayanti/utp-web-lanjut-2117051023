@@ -35,11 +35,16 @@
                     <td><?= $user['nama_kelas'] ?></td>
                     <td>
                         <a a href="<?= base_url('user/' . $user['id']) ?>" class="btn btn-info">Detail</a>
-                        <a href="#" class="btn btn-warning">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="<?= base_url('user/' . $user['id'] . '/edit') ?>" class="btn btn-warning">Edit</a>
+                        <form action="<?= base_url('user/' . $user['id']) ?>" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <?= csrf_field() ?>
+                            <button type="submit" class="btn btn-danger"> Delete</button>
+                        </form>
+                        <!-- <a href="#" class="btn btn-danger">Delete</a> -->
                     </td>
                     <td>
-                        <img src="<?= $user['foto'] ?? '<default-foto>' ?>" width="45px" height="45px" alt="">
+                        <img src="<?= $user['foto'] ?? '<default-foto>' ?>" width="100px" alt="">
                     </td>
                 </tr>
             <?php
