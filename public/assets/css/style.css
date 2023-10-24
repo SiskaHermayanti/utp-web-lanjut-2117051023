@@ -2,7 +2,8 @@
 	font-family: 'Poppins', sans-serif;
 }
 body {
-	background: -webkit-linear-gradient(bottom, #419197, #12486B);
+	background: -webkit-linear-gradient(bottom, #419197, #12486B); 
+  	background-size: 100% 100%; /* Atur proporsi gradasi */
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
@@ -24,14 +25,6 @@ body {
 	border: 30px !important; 
 }
 
-/* .form-control{
-	border-width: 8px !important; 
-	border-color: black !important;
-}
-.form-select{
-	border-color: black !important;
-} */
-
 .btn-primary{
 	background: -webkit-linear-gradient(right, #419197, #12486B);
 	border: none !important;
@@ -43,7 +36,6 @@ body {
 	margin: 0 auto;
 	width: 153px;
 	margin-bottom: 50px;
-	
 }
 
 .btn-primary:hover{
@@ -52,13 +44,9 @@ body {
 
 /* list user */
 .containerlist {
-	position: absolute;
-    top: 50px;
-    left: 100px;
-    right: 100px;
-    bottom: 50px;
-	overflow: auto;
-	padding: 5% 5%;
+	margin: 80px 80px;
+	position: relative;
+	padding: 1em;
 	background-color: #fafafa;
-	border-radius: 20px; 
+	border-radius: 5px;  
 }

@@ -8,20 +8,24 @@ use App\Controllers\UserController;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-// $routes->get('/profile', 'Home::profile');
-// $routes->get('/profile/(:any)/(:any)/(:any)', 'Home::profile');
-// $routes->get('/user/profile', [UserController::class, 'profile']);
-// $routes->get('user/profile', 'UserController::profile');
-$routes->get('user/profile/(:any)/(:any)/', 'UserController::profile/$1/$2/');
-// $routes->get('/user/create', [UserController::class, 'create']);
+$routes->get('/profile', 'Home::profile');
+$routes->get('/profile/(:any)/(:any)/(:any)', 'Home::profile');
+// $routes->get('/user/profile', 'UserController::profile');
+$routes->get('/user/profile', [UserController::class,'profile']);
+$routes->get('/user/create', [UserController::class,'create']);
+$routes->post('/user/store', [UserController::class, 'store']);
 
-#form
-$routes->get('/user/create', 'UserController::create');
-// $routes->post('/user/store', [UserController::class, 'store']);
-$routes->post('/user/store', 'UserController::store');
-
-$routes->get('/user', 'UserController::index');
-
-$routes->post('/user/profile', 'UserController::profile');
+//list user
 $routes->get('/user', [UserController::class, 'index']);
-$routes->get('/user/(:any)', [UserController::class, 'show']);
+
+//edit
+$routes->get('user/(:any)/edit', [UserController::class, 'edit']);
+
+//update
+$routes->put('user/(:any)', [UserController::class, 'update']);
+
+//delete
+$routes->delete('user/(:any)', [UserController::class, 'destroy']);
+
+//menampilkan detail
+$routes->get('user/(:any)', [UserController::class, 'show']);
