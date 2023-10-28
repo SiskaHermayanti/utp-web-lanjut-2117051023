@@ -3,11 +3,30 @@
 <?= $this->section('content')?>
     <!-- Ini halaman list user -->
 
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid ms-5 me-5">
+    <a class="navbar-brand" href="#">Web Lanjut</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="<?= base_url('/user') ?>">List User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?= base_url('/kelas') ?>">List Kelas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <!-- Judul -->
 <div class="containerlist">
 
 <figure class="data">
-        <h2 style="text-align: center">Data User</h2>
+    <h2 style="text-align: center">Data User</h2>
     </figure>
     <figcaption class="blockquote-footer" style="text-align: center">
         Read Data <cite title="Source Title"></cite>

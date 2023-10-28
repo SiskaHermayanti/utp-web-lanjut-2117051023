@@ -28,7 +28,7 @@ class UserController extends BaseController
         return view('list_user', $data);
     }
 
-    public function profile($nama = "Siska", $kelas = "C", $npm = "2117051023")
+    public function profile($nama = "Siska", $kelas = "", $npm = "")
     {
         $data = [
             'nama' => $nama,
